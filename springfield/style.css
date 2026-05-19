@@ -43,7 +43,7 @@ nav a {
 }
 
 #banner {
-    background-image: url("./banner.jpg");
+    background-image: url("./springfield.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -51,30 +51,19 @@ nav a {
     height: 13rem;
 }
 
-hr {
-    width: 65%;
-    float: left;
-    margin: 0;
-    border-color: var(--color1);
+main {
+    display: flex;
+    justify-content: space-evenly;
 }
 
-main section {
-    width: 75%;
+section {
+    border: 1px solid #000;
+    width: 15rem;
+    height: 15rem;
+    margin-top: 1rem;
 }
 
-aside {
-    width: 25%;
-    position: absolute;
-    right: 0;
-    border: 1px solid var(--color1);
-    background-color: var(--color7);
-}
-
-aside h3 {
-    margin-left: 8px;
-}
-
-h3 a {
-    color: var(--color6);
-    text-decoration: none;
+section img {
+    height: 15rem;
+    width: 15rem;
 }
