@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Finlandica+Headline:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+    --color1: #000000;
+    --color2: #FFFFFF;
+    --color3: #FCCB00;
+    --color4: #E44423;
+    --color5: #5C9ED9;
+    --color6: #1769B6;
+    --color7: #CDDF8D;
+    background-color: var(--color3);
+    font-family: "Inter", sans-serif;
+}
+
+header {
+    border: 1px solid var(--color1);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--color5);
+    font-family: "Finlandica Headline", sans-serif;
+}
+
+header h1, header img {
+    margin-left: 1rem;
+}
+
+nav {
+    border: 1px solid var(--color1);
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    background-color: var(--color6);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--color1);
+    margin: 1rem;
+    font-family: sans-serif;
+    font-size: large;
+    color: var(--color2);
+}
+
+#banner {
+    background-image: url("./springfield.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 13rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
