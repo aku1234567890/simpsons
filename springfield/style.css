@@ -67,3 +67,20 @@ section img {
     height: 15rem;
     width: 15rem;
 }
+
+.i {
+    height: 20rem;
+    width: 20rem;
+    margin: 8px;
+}
+
+.j {
+    height: 40rem;
+    width: 40rem;
+    margin: 8px;
+}
+
+.a {
+    display: flex;
+    flex-direction: column;
+}
