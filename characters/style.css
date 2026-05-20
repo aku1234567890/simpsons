@@ -53,6 +53,24 @@ nav a {
 
 main {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    padding: 1rem;
+}
+
+aside {
+    flex: 0;
+    width: 30%;
+    border: 1px solid #000;
+    margin: 8px;
+}
+
+section {
+    flex: 1;
+    width: 70%;
+    border: 1px solid #000;
+    margin: 8px;
 }
 
