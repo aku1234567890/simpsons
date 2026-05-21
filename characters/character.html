@@ -74,17 +74,30 @@
                 </div>
 
                 <div id="memes" class="tabcontent">
-                <img id="meme1" height="192" width="192">
-                <img id="meme2" height="192" width="192">
-                <img id="meme3" height="192" width="192">
-                <img id="meme4" height="192" width="192">
-                <img id="meme5" height="192" width="192">
+                <img id="meme1" height="192" width="192" onclick="swell('meme1')">
+                <img id="meme2" height="192" width="192" onclick="swell('meme2')">
+                <img id="meme3" height="192" width="192" onclick="swell('meme3')">
+                <img id="meme4" height="192" width="192" onclick="swell('meme4')">
+                <img id="meme5" height="192" width="192" onclick="swell('meme5')">
                 </div>
             </section>
         </main>
         
     </body>
     <script>
+        let swelled = false;
+        function swell(i) {
+            if (swelled == false) {
+                document.getElementById(i).style.height = "1024px";
+                document.getElementById(i).style.width = "1024px";
+                swelled = true
+            } else {
+                document.getElementById(i).style.height = "192px";
+                document.getElementById(i).style.width = "192px";
+                swelled = false
+            }
+        }
+
         function tab(evt, c) {
             var i, tabcontent, tablinks;
             tabcontent = document.getElementsByClassName("tabcontent");
