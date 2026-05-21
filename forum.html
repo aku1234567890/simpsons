@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <title>Simpsons sivusto</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <a href="/">
+            <img src="./The_Simpsons_yellow_logo.svg" width="128" height="128">
+            </a>
+            <h1>The Simpsons Page</h1>
+        </header>
+        <nav>
+            <a href="/springfield">Springfield</a>
+            <a href="/characters">Characters</a>
+            <a href="/forum.html">Forum</a>
+        </nav>
+        <div id="banner"></div>
+        <main>
+            <button command="show-modal" commandfor="dialogi">New message</button>
+            <dialog id="dialogi">
+                <label>Name</label>
+                <input type="text" id="name">
+                <br>
+                <label>Title</label>
+                <input type="text" id="title">
+                <br>
+                <textarea id="comment"></textarea>
+                <button commandfor="dialogi" command="close">Cancel</button>
+                <button onclick="send()">Send</button>
+            </dialog>
+            <section id="comments"></section>
+        </main>
+        
+    </body>
+    <script>
+
+        let messages = [
+    {
+        "sender": "mr customer",
+        "date": "2010-05-10",
+        "title": "looking for someone",
+        "body": "Hi, I'm looking for someone I used to know in high school. I'm wondering if I could find him here?"
+    },
+    {
+        "sender": "Moe",
+        "date": "2010-05-10",
+        "title": "re: looking for someone",
+        "body": "Let's ask around. What's his name?"
+    },
+    {
+        "sender": "mr customer",
+        "date": "2010-05-10",
+        "title": "re: looking for someone",
+        "body": "Yeah, his name is Seymore Butz."
+    },
+    {
+        "sender": "Moe",
+        "date": "2010-05-10",
+        "title": "re: looking for someone",
+        "body": "Is there a Butz here? Everybody! I wanna Seymore Butz!"
+    },
+    {
+        "sender": "Barney",
+        "date": "2010-05-10",
+        "title": "re: looking for someone",
+        "body": "LOL"
+    },
+    {
+        "sender": "Moe",
+        "date": "2010-05-10",
+        "title": "re: looking for someone",
+        "body": "Oh, wait a minute. Listen you little scum-sucking pus bucket. When I get my hands on you, I'm gonna pull out your eyeballs with a corkscrew!"
+    },
+    {
+        "sender": "mr customer",
+        "date": "2010-05-10",
+        "title": "re: looking for someone",
+        "body": "😂😂😂😂😂😂😂😂😂😂😂"
+    }
+]
+
+    function renderMsg() {
+        document.getElementById("comments").innerHTML = "";
+        for (let i of messages) {
+            let w = document.createElement("div")
+            let name = document.createElement("p")
+            let title = document.createElement("h3")
+            let msg = document.createElement("p")
+            let hr = document.createElement("hr")
+            hr.style.width = "100%";
+            name.innerHTML = i.sender + " - " + i.date
+            title.innerHTML = i.title
+            msg.innerHTML = i.body
+            w.appendChild(hr)
+            w.appendChild(name)
+            w.appendChild(title)
+            w.appendChild(msg)
+            document.getElementById("comments").appendChild(w)
+        }
+    }
+    
+
+    function send() {
+        let time = new Date().toISOString().split("T")[0];
+        let a = document.getElementById("name").value;
+        let b = document.getElementById("title").value;
+        let c = document.getElementById("comment").value;
+        let object = {
+            "sender": a,
+            "date": time,
+            "title": b,
+            "body": c
+        }
+        messages.push(object)
+        renderMsg()
+    }
+    renderMsg()
+    </script>
+</html>
