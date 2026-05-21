@@ -58,6 +58,10 @@ hr {
     border-color: var(--color1);
 }
 
+main {
+    padding: 8px;
+}
+
 main section {
     width: 75%;
 }
